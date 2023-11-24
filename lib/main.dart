@@ -37,7 +37,6 @@ class MyApp extends StatelessWidget {
           secondary: Color(0xFF424242),
           onSecondary: Color(0xFF151D20),
           tertiary: Color(0xFFFFFFFF),
-          // ignore: use_full_hex_values_for_flutter_colors
           onTertiary: Color.fromARGB(180, 255, 255, 255),
         ),
         fontFamily: 'Normal',
