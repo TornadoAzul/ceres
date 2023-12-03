@@ -1,57 +1,19 @@
-enum Tipo {
-  sec,
-  pri,
-  vid,
-}
+enum Tipo { per, has }
 
 final List<Map<String, dynamic>> datos = [
   {
-    "hashtag": "memes",
-    "tipo": Tipo.sec,
+    "id": 'nucarecibo',
+    "tipo": Tipo.per,
+    "text": '¡Bienvenido a nuestra página de ástegod!'
   },
   {
-    "hashtag": "authority",
-    "tipo": Tipo.pri,
-  },
-  {"hashtag": "developer", "tipo": Tipo.sec},
-  {
-    "hashtag": "love",
-    "tipo": Tipo.sec,
+    "id": 'confesiones',
+    "tipo": Tipo.has,
+    "text": 'Ayer caí en la melena de un árbol azul en San Juan. Lol.'
   },
   {
-    "hashtag": "puprconfesiones",
-    "tipo": Tipo.sec,
-  },
-  {
-    "hashtag": "uprrp",
-    "tipo": Tipo.pri,
-  },
-  {
-    "hashtag": "uprrpconfesiones",
-    "tipo": Tipo.sec,
-  },
-  {
-    "hashtag": "manatipr",
-    "tipo": Tipo.pri,
-  },
-  {
-    "hashtag": "prgov",
-    "tipo": Tipo.pri,
-  },
-  {
-    "hashtag": "nucuniversity",
-    "tipo": Tipo.pri,
-  },
-  {
-    "hashtag": "daveschool",
-    "tipo": Tipo.pri,
-  },
-  {
-    "hashtag": "evertec",
-    "tipo": Tipo.pri,
-  },
-  {
-    "hashtag": "haha",
-    "tipo": Tipo.sec,
+    "id": 'tornadoazul',
+    "tipo": Tipo.per,
+    "text": 'No tengo puta idea de qué decir. Este es mi primer ástegod.'
   },
 ];

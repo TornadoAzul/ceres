@@ -1,5 +1,5 @@
-import 'package:aaroic/data/data.dart';
-import 'package:aaroic/views/view.dart';
+import 'package:astegod/data/data.dart';
+import 'package:astegod/views/view.dart';
 import 'package:flutter/material.dart';
 import 'package:masonry_grid/masonry_grid.dart';
 

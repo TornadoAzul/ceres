@@ -1,5 +1,6 @@
 // ignore_for_file: depend_on_referenced_packages
-import 'package:aaroic/inicio.dart';
+import 'package:astegod/inicio.dart';
+import 'package:astegod/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'generated/l10n.dart';
@@ -7,8 +8,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(const MyApp());
-  SystemChannels.platform
-      .invokeMethod('com.google.android.exoplayer2.EnableLogcat', true);
 }
 
 class MyApp extends StatelessWidget {
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const InicioScreen(),
+      home: const LoginScreen(),
       theme: ThemeData(
         brightness: Brightness.light,
         scaffoldBackgroundColor: const Color(0xFFF8F8F8),

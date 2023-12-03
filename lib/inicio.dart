@@ -1,5 +1,5 @@
-import 'package:aaroic/views/chat.dart';
-import 'package:aaroic/views/notas.dart';
+import 'package:astegod/views/chat.dart';
+import 'package:astegod/views/explorar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ionicons/ionicons.dart';
@@ -19,7 +19,7 @@ class _InicioScreenState extends State<InicioScreen> {
   void initState() {
     super.initState();
 
-    vistas = [const NotasView(), const ChatView()];
+    vistas = [const ExplorarView(), const ChatView()];
   }
 
   void _onItemTapped(int index) {
@@ -62,13 +62,13 @@ class _InicioScreenState extends State<InicioScreen> {
             IconButton(
               icon: _selectedIndex == 0
                   ? Icon(
-                      Ionicons.play_circle,
+                      Ionicons.planet,
                       color: Theme.of(context).brightness == Brightness.dark
                           ? Theme.of(context).colorScheme.onBackground
                           : Theme.of(context).primaryColor,
                     )
                   : Icon(
-                      Ionicons.play_circle_outline,
+                      Ionicons.planet_outline,
                       color: Theme.of(context).colorScheme.secondary,
                     ),
               onPressed: () {
