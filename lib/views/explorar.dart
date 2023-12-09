@@ -1,4 +1,3 @@
-import 'package:astegod/data/data.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -13,60 +12,79 @@ class _ExplorarViewState extends State<ExplorarView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView.builder(
-        itemCount: datos.length,
-        itemBuilder: (context, index) {
-          return _buildPage(datos[index]);
-        },
-      ),
-    );
-  }
-
-  Widget _buildPage(Map<String, dynamic> data) {
-    String id = data['id'];
-    if (data['tipo'] == Tipo.per) {
-      id = '@$id';
-    } else if (data['tipo'] == Tipo.has) {
-      id = '#$id';
-    }
-
-    return Container(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
+      body: Column(
         children: [
-          const SizedBox(height: 30),
-          Flexible(
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                data['text'],
-                textAlign: TextAlign.left,
-                style: TextStyle(fontSize: 45.0),
-              ),
+          Expanded(
+            child: ListView(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.tertiary,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  padding: const EdgeInsets.all(16),
+                  child: const Text(
+                    "Esto es una imagen. Una hermosa imagen.",
+                    style: TextStyle(fontSize: 28),
+                  ),
+                ),
+                const ListTile(
+                  title: Text(
+                    "Quizá no entiendas, pero esto es Codrecup. La nueva plataforma para poder ver cosas increíbles y ser parte de la internet.",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                ),
+                const ListTile(
+                  leading: Icon(Ionicons.reader, size: 24),
+                  title: Text(
+                    "Más información",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                ),
+                const ListTile(
+                  leading: Icon(Ionicons.medical, size: 24),
+                  title: Text(
+                    "Calculadora",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                ),
+              ],
             ),
           ),
-          Container(
-            margin: const EdgeInsets.only(top: 16.0),
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        id,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                            fontSize: 22.0, fontWeight: FontWeight.bold),
-                      ),
-                    ),
+          SizedBox(
+            height: 50,
+            child: Row(
+              children: [
+                SizedBox(width: 10),
+                Expanded(
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 10,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        decoration: BoxDecoration(
+                            color: Theme.of(context).colorScheme.background,
+                            borderRadius: BorderRadius.circular(10)),
+                        margin: const EdgeInsets.all(8),
+                        child: Center(
+                          child: Container(
+                            padding: EdgeInsets.only(left: 10, right: 10),
+                            child: Text(
+                              "Objeto $index",
+                              style: TextStyle(
+                                  fontSize: 24,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onBackground),
+                            ),
+                          ),
+                        ),
+                      );
+                    },
                   ),
-                  const Icon(
-                    Ionicons.add_circle,
-                  ),
-                ],
-              ),
+                ),
+                SizedBox(width: 10),
+              ],
             ),
           ),
         ],

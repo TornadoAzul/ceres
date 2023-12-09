@@ -32,11 +32,12 @@ class _InicioScreenState extends State<InicioScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        forceMaterialTransparency: true,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         title: Center(
           child: GestureDetector(
             child: SizedBox(
-              height: 29,
+              height: 24,
               child: SvgPicture.asset(
                 Theme.of(context).brightness == Brightness.dark
                     ? "assets/imagenes/isotipo-oscuro.svg"

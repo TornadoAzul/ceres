@@ -1,6 +1,5 @@
 // ignore_for_file: depend_on_referenced_packages
 import 'package:astegod/inicio.dart';
-import 'package:astegod/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'generated/l10n.dart';
@@ -25,11 +24,11 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const LoginScreen(),
+      home: const InicioScreen(),
       theme: ThemeData(
         brightness: Brightness.light,
         scaffoldBackgroundColor: const Color(0xFFF8F8F8),
-        primaryColor: const Color(0xFF2FC9C0),
+        primaryColor: const Color(0xFF0780FE),
         colorScheme: const ColorScheme.light(
           background: Color(0xFFE1E1E1),
           onBackground: Color(0xFF171717),
@@ -43,14 +42,13 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         scaffoldBackgroundColor: const Color(0xFF101010),
-        primaryColor: const Color(0xFF2FC9C0),
+        primaryColor: const Color(0xFF0780FE),
         colorScheme: const ColorScheme.dark(
           background: Color(0xFF171717),
           onBackground: Color(0xFFF8F8F8),
           secondary: Color(0xFF5D5D5D),
           onSecondary: Color(0xFFF4F4F4),
           tertiary: Color(0xFF282828),
-          // ignore: use_full_hex_values_for_flutter_colors
           onTertiary: Color.fromARGB(180, 40, 40, 40),
         ),
         fontFamily: 'Normal',
